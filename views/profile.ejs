@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head') %>
+<body>
+    <%- include('includes/header') %>
+
+    <main>
+        <h1><%= profile.username %></h1>
+        <p>Public Key Adress:</p>
+        <article>
+
+            <div>
+                <%- profile.pubKey[0] %><br>
+                <%- profile.pubKey[1] %><br>
+                <%- profile.pubKey[2] %><br>
+                <%- profile.pubKey[3] %><br>
+                <%- profile.pubKey[4] %><br>
+                <%- profile.pubKey[5] %><br>
+                <%- profile.pubKey[6] %><br>
+                <%- profile.pubKey[7] %><br>
+                <%- profile.pubKey[8] %><br>
+
+            </div>
+        </article>
+
+    </main>
+    <%- include('includes/footer') %>
+
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head') %>
+<body>
+    <%- include('includes/header') %>
+
+    <main>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <% errors.forEach(error =>{ %> 
+                    <p class="notice"> <%= error %> </p>
+                <%}) %>
+        <fieldset>
+            <legend>Sign a New Document</legend>
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file" required/>
+
+            <br />
+            <button>Upload & Sign</button>
+        </fieldset>
+        </form>
+
+    </main>
+    <%- include('includes/footer') %>
+
+    
+</body>
+</html>

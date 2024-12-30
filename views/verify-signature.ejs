@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('includes/head') %>
+<body>
+    <%- include('includes/header') %>
+
+    <main>
+        <form action="/verify" method="POST" enctype="multipart/form-data">
+            <% errors.forEach(error =>{ %> 
+                    <p class="notice"> <%= error %> </p>
+                <%}) %>
+        <fieldset>
+            <legend>Verify a Signature</legend>
+            <label for="file1">Document:</label>
+            <input type="file" id="file1" name="doc" required/>
+            <label for="file2">Signature</label>
+            <input type="file" id="file2" name="sig" required/>
+            <label for="body"><small>Public Key of Signer</small></label>
+            <textarea name="body" id="body"></textarea>
+
+            <br />
+            <button>Verify Now</button>
+        </fieldset>
+        </form>
+
+    </main>
+    <%- include('includes/footer') %>
+
+    
+</body>
+</html>
